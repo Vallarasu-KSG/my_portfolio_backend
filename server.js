@@ -21,10 +21,10 @@ app.post('/send', async (req, res) => {
   });
   
 const mailOptions = {
-    from: name,
+    from: email,
     to: process.env.EMAIL_USER,
     subject: `New message from ${name}`,
-    text: `Name: ${name}\n\nEmail: (${email}\n\n Message: ${message} )`,
+    text: `Name: ${name}\n\nEmail: ${email}\n\n Message: ${message}`,
     replyTo: email  // ✅ This lets you reply to the sender directly
   };
   
